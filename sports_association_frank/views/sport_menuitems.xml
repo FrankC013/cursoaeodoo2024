@@ -17,6 +17,29 @@
             id="sport_license_menu"
             action="sport_license_action"
             sequence="20"
-        />              
+        />
+        <menuitem 
+            name="Clinics"
+            id="sport_clinic_menu"
+            action="sport_clinic_action"
+            sequence="30"
+        />
+        <menuitem id="sport_team_menu"
+            name="Teams"
+            sequence="40"
+            action="action_sport_team"            
+            groups="base.group_user"/>
+        
+        <menuitem id="sport_player_menu"
+            name="Players"
+            sequence="50"
+            action="action_sport_player"            
+            groups="base.group_user"/>
+
+        <menuitem id="sport_sport_menu"
+            name="Sports"
+            sequence="60"
+            action="action_sport_sport"            
+            groups="base.group_user"/>
     </menuitem>
 </odoo>

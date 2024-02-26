@@ -24,6 +24,29 @@ class SportIssue(models.Model):
     )
     sequence = fields.Integer(string="Sequence")
     solution = fields.Html(string="Solution")
+    clinic_id = fields.Many2one(
+        comodel_name="sport.clinic",
+        string="Clinic",
+    )
+    tag_ids = fields.Many2many(
+        comodel_name="sport.issue.tag",
+        string="Tags",
+    )
+    color = fields.Integer(string="Color", default=0)
+    cost = fields.Float(string="Cost")
+
+    def action_open(self):
+        self.write({"state": "open"})
+
+    def action_draft(self):
+        self.write({"state": "draft"})
+
+    def action_done(self):
+        self.write({"state": "done"})
+
+    def action_done_all_issues(self):
+        issues = self.search([])
+        issues.action_done()
 
     # Mis cambios
     # -----------------------------------------
