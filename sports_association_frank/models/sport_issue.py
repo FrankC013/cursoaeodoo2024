@@ -4,6 +4,7 @@ class SportIssue(models.Model):
     _name = "sport.issue"
     _description = "Sport Issue"
 
+    # Clase
     name = fields.Char(string="Title", required=True)
     description = fields.Text(string="Description")
     date = fields.Date(string="Date")
@@ -17,6 +18,16 @@ class SportIssue(models.Model):
         string="State",
         default="draft",
     )
+    user_id = fields.Many2one(
+        comodel_name="res.users",
+        string="Responsible",
+    )
+    sequence = fields.Integer(string="Sequence")
+    solution = fields.Html(string="Solution")
+
+    # Mis cambios
+    # -----------------------------------------
+    #
     priority = fields.Selection(
         selection=[
             ("1", "Low"),

@@ -17,25 +17,37 @@
         <field name="arch" type="xml">
             <form string="Sport Issue">
                 <header>
-                    <field name="state" widget="statusbar" />
+                    <field name="state" widget="statusbar" options="{'clickable': '1'}" />
                 </header>
                 <sheet>
                     <h1>
-                        <label for="name"/>
-                        <div>
+                        <label for="name" string="Issue"/>
+                        <div class="oe_title">
                             <field name="name"/>
                         </div>                     
                     </h1>
+                    <h2>
+                        <label for="user_id"/>
+                        <field name="user_id" />
+                    </h2>
                     <group string="Personal Info" col="2">
                         <group>
-                            <field name="description" />
                             <field name="date" />
+                            <field name="sequence" />
                         </group>
                         <group>
                             <field name="assistance" widget="boolean_toggle" />
                             <field name="priority" widget="radio" />
                         </group>
                     </group>
+                    <notebook>
+                        <page name="description" string="Description">
+                            <field name="description" />
+                        </page>
+                        <page name="solution" string="Solution">
+                            <field name="solution" />
+                        </page>
+                    </notebook>
                 </sheet>
             </form>
         </field>
@@ -45,9 +57,12 @@
         <field name="model">sport.issue</field>
         <field name="arch" type="xml">
             <tree string="Sport Issues">
+                <field name="sequence" widget="handle" />
                 <field name="name" />
-                <field name="date" />
+                <field name="date" optional="show" />
+                <field name="user_id" optional="hide" />
                 <field name="assistance" widget="boolean_toggle" />
+                <field name="state" widget="badge" decoration-info="state == 'open'" decoration-success="state == 'done'" />
             </tree>
         </field>
     </record>

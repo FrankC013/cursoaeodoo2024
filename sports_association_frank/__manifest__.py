@@ -13,8 +13,11 @@
         "base",
     ],
     "data": [
+        "data/sport_license_data.xml",
+        "security/groups.xml",
         "security/ir.model.access.csv",
-        "views/sport_issue_view.xml",
-        "views/sport_association_frank_view.xml",
+        "views/sport_license_views.xml",
+        "views/sport_issue_views.xml",
+        "views/sport_menuitems.xml",
     ],
 }

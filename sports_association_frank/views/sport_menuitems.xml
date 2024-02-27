@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem
+        name="Sport Association"
+        id="sports_association_menu"
+        web_icon="sports_association_frank,static/description/icon.png"
+        groups="res_groups_sports_association_manager"
+    >
+        <menuitem
+            name="Sport Issues"
+            id="sport_issue_menu"
+            action="sport_issue_action"
+            sequence="10"
+        />  
+        <menuitem
+            name="Licenses"
+            id="sport_license_menu"
+            action="sport_license_action"
+            sequence="20"
+        />              
+    </menuitem>
+</odoo>
