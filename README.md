@@ -1,4 +1,5 @@
 Listado
+
 | Nombre | Apellido | Discord | Instalacion Odoo | Git | 
 | --- | --- | --- | --- | --- |
 | Nacho | Serra Almenar | nachoserra_domatix | Si | Si | 
@@ -17,4 +18,10 @@ Listado
 | Ruben | García Solís | potxolate | Si | Si | 
 | Vicent | Esteve Ferre | vicent_esteve | Si | Si | 
 | Adasat | Torres de león | adasatorres | Si | Si | 
+| Daniel | Sulbarán Socas | danielsulbaranbakata | Si | Si | 
+| Arian | Zaghi | Arian (Punt Sistemes) | si | si |
 | Daniel | Sulbarán Socas | danielsulbaranbakata | Si | Si |
+| Yuniel | Villalon Rosales | Yuniel Villalon Rolsales | si | si |
+| Gabriel | Recio Rodríguez | Gabriel Recio(Sistemas de Datos) | Sí | Sí |
+| Angel | Martínez Serra | angelmartserr | si | si |
+| Gonzalo | Crosio | Punt Sistemes | si | si |
